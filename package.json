@@ -1,0 +1,23 @@
+{
+  "name": "btc-signing",
+  "version": "0.1.0",
+  "description": "Generate signatures for btc addresses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "btc",
+    "bitcoin",
+    "blockchain"
+  ],
+  "author": "Brenner Spear",
+  "license": "ISC",
+  "repository": {
+  "type": "git",
+  "url": "git@github.com:BrennerSpear/btc_signing.git"
+  },
+  "dependencies": {
+    "bitcore-lib": "0.15.0"
+  }
+}
