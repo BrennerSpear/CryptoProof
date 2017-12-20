@@ -1,5 +1,5 @@
 {
-  "name": "btc-signing",
+  "name": "CryptoProof",
   "version": "0.1.0",
   "description": "Generate signatures for btc addresses",
   "main": "index.js",
@@ -15,7 +15,7 @@
   "license": "ISC",
   "repository": {
   "type": "git",
-  "url": "https://github.com/BrennerSpear/btc_signing.git"
+  "url": "https://github.com/BrennerSpear/CryptoProof.git"
   },
   "dependencies": {
     "bitcore-lib": "0.15.0"
