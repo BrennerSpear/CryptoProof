@@ -10,6 +10,7 @@ document.getElementById("verify").onclick = function() {verifySignature()}
 
 
 function generateSignature() {
+  
   console.log('generating')
 
   var message = document.getElementById('messageInput').value;
