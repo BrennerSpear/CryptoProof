@@ -16,16 +16,14 @@ function generateSignature() {
   var message = document.getElementById('messageInput').value;
 
   var WIF = document.getElementById('WIFinput').value;
-  setText('WIF', WIF);
+  // setText('WIF', WIF);
 
   var privateKey = bitcore.PrivateKey.fromWIF(WIF);
   var signature = Message(message).sign(privateKey);
   setText('signature', signature);
 
-  document.getElementById('signatureInput').value = signature;
-  document.getElementById('verifyMessageInput').value = message;
-
-  
+  // document.getElementById('signatureInput').value = signature;
+  // document.getElementById('verifyMessageInput').value = message;
 }
 
 function verifySignature() {
@@ -38,11 +36,3 @@ function verifySignature() {
   var verified = Message(message).verify(walletAddress, signature);
   document.getElementById('verified').innerHTML = verified
 }
-
-
-
-
-
-
-
-
