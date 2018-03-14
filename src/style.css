@@ -1,0 +1,42 @@
+body {
+  font-family: 'Share Tech Mono', monospace !important;
+}
+
+.header {
+  background-color: #8c8c8c;
+}
+.generatedOutput {
+  background: rgba(168, 200, 250, .2);
+  min-height: 140px;
+  border-radius: 4px;
+  word-break: break-all;
+  padding: 4px 12px;
+  border-style: solid;
+  border-color: #8c8c8c;
+  border-width: 1px;
+}
+
+.inputFieldLg {
+  width: inherit;
+  min-height: 58px;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #8c8c8c;
+  border-width: 1px;
+  margin-bottom: 12px;
+}
+
+.inputFieldSm {
+  width: inherit;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #8c8c8c;
+  border-width: 1px;
+  margin-bottom: 12px;
+}
+
+#generate {
+  color: white;
+  background-color: rgba(255, 140, 0, 1);
+  border-color: #8c8c8c;
+}

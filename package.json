@@ -21,6 +21,7 @@
     "bitcore-lib": "0.15.0"
   },
   "devDependencies": {
-    "simplifyify": "^3.2.4"
+    "simplifyify": "^3.2.4",
+    "uglifycss": "0.0.28"
   }
 }
