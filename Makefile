@@ -19,7 +19,7 @@ $(JS_TARGET): node_modules
 
 $(CSS_TARGET):
 	$(UGLIFYCSS) $(CSS_SOURCE) --output $(CSS_TARGET)
-	gsed -i 's/src\/style.css/dist\/style.min.css/' index.html
+	sed -i 's/src\/style.css/dist\/style.min.css/' index.html
 
 node_modules:
 	$(NPM) install
@@ -29,5 +29,5 @@ watch:
 	$(SIMPLIFYIFY) $(JS_SOURCE) -o $(JS_TARGET) --watch --debug 
 
 clean:
-	gsed -i 's/dist\/style.min.css/src\/style.css/' index.html
+	sed -i 's/dist\/style.min.css/src\/style.css/' index.html
 	rm -f dist/*
