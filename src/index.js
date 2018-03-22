@@ -6,7 +6,7 @@ function setText(id, val) {
 }
 
 document.getElementById("generate").onclick = function() {generateSignature()}
-// document.getElementById("verify").onclick = function() {verifySignature()}
+document.getElementById("verify").onclick = function() {verifySignature()}
 
 
 function generateSignature() {
