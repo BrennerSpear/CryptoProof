@@ -34,5 +34,12 @@ function verifySignature() {
   var message = document.getElementById('verifyMessageInput').value;
 
   var verified = Message(message).verify(walletAddress, signature);
+
+  if(verified) {
+    document.getElementById('verified').style.color = 'green';  
+  } else {
+    document.getElementById('verified').style.color = 'red';  
+  }
+  
   document.getElementById('verified').innerHTML = verified
 }

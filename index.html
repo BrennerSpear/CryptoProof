@@ -9,106 +9,146 @@
 
 </head>
 <body>
-      <div class="header">
-      <div class="row pt-3">
-        <h2 class="mx-auto">CryptoProof</h2>
+  <div class="header">
+    <div class="row pt-3 pb-3">
+      <div class="col-2">
+          <img src="./assets/CryptoProof.png" height="75" alt="" class="ml-2 mr-2">
       </div>
-      <div class="row">
-        <img class="mx-auto py-3" src="./assets/CryptoProof.png" height="150" alt="">
+      <div class="col-8 align-self-center text-center">
+          <h1 class="no-margin">CryptoProof</h1>
       </div>
     </div>
+  </div>
   <div class="container mb-5">
-
-    <div class="row mt-3">
-      <div class="col-12">
-        <p>
-          CryptoProof is an easy way to generate proof you own a specific bitcoin wallet by signing a message with the wallet's private key. When you sign a message with a private key it generates a signature.
-        </p>
-      </div>
-    </div>
-
-    <div class="row mt-3 text-center">
-      <div class="col-12">
-        <h1 class="text-center">Generate signature</h1>
-      </div>
-    </div>
-    
     <div class="row">
-      <div class="col-6">
-        <h4 class="text-center">Enter Private Key:</h4>
-        <textarea
-          class="inputTextArea areaMd"
-          type="text"
-          id="WIFinput"
-          placeholder="KyrijJDC3Aer78Z2nzRA3NAKMdMVwthMpH7fSyTQVBAj1KDBwiXa"></textarea> 
-        <h4 class="text-center">Enter Message:</h4>
-        <input 
-          class="inputTextArea" 
-          type="text" 
-          id="messageInput" 
-          placeholder=" I, Satoshi, own this wallet">
+
+      <div class="col-12 col-lg-6 thin">
+        <div class="row mt-3 text-center">
+          <div class='col-12'>
+            <h1 class="text-center">Generate signature</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class='col-12'>
+            <h4>Enter Private Key:</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class='col-12'>
+            <textarea
+              class="inputTextArea areaMd"
+              type="text"
+              id="WIFinput"
+              placeholder="KyrijJDC3Aer78Z2nzRA3NAKMdMVwthMpH7fSyTQVBAj1KDBwiXa"></textarea>
+            </div>
+        </div>
+        <div class="row">
+          <div class='col-12'>
+            <h4>Enter Message:</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class='col-12'>
+            <input 
+              class="inputTextArea" 
+              type="text" 
+              id="messageInput" 
+              placeholder=" I, Satoshi, own this wallet">
+          </div>
+        </div>
+        <div class="row">
+          <div class='col-12'>
+            <h4>Signature</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class='col-12'>
+            <p id="signature" class="generatedOutput outputSm"></p>
+          </div>
+        </div>
+        <div class="row mt-3 mb-3">
+          <div class="col-6 offset-3">
+            <button class="btn btn-lg btn-block" type="button" id="generate">generate</button>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <p>
+              CryptoProof is an easy way to generate proof you own a specific bitcoin wallet by signing a message with the wallet's private key. When you sign a message with a private key it generates a signature.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="col-6">
-        <h4 class="text-center">Signature</h4>
-        <p id="signature" class="generatedOutput outputSm"></p>
+
+
+      <div class="col-12 col-lg-6 thin">
+        <div class="row mt-3 text-center">
+          <div class="col-12">
+            <h1 class="text-center">Verify signature</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h4>Enter Public Key:</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <textarea
+              class="inputTextArea"
+              type="text" 
+              id="walletInput"
+              placeholder="17Tbeu1VTRB4nMPNJQGC4b6561YwhXdufG"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h4>Enter Signature:</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <textarea
+              class="inputTextArea areaLg"
+              type="text"
+              id="signatureInput"
+              placeholder="H/UjQd4DeaIfT8C5GW5ByTD9Goiu0P6y2VTRcwkpE1wcWIxqCHrEsd7JoOO76avxP6Sqpm2zBSulrazt8WczEuc="></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h4>Enter Message:</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <input
+            class="inputTextArea"
+              type="text"
+              id="verifyMessageInput"
+              placeholder=" I, Satoshi, own this wallet">
+          </div>
+        </div>
+        <div class="row mt-3 mb-3">
+          <div class="col-12 col-xl-6">
+            <button class="btn btn-lg btn-block" type="button" id="verify">verify</button>
+          </div>
+          <div class="col-12 col-xl-6 align-self-center text-center mt-3 mb-3">
+            <h5 class="no-margin">Verified?
+              <span id="verified" class="generatedOutput">unknown</span>
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p>
+              You can also use CryptoProof to verify someone else's ownership of a specific wallet address. You can combine a wallet address (aka a public key), the message, and compare it to a signature supplied by the individual in question. The verifier will return either true or false (verified or unverified, respectively).
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-4 offset-4">
-        <button class="btn btn-lg btn-block" type="button" id="generate">generate</button>
-      </div>
-    </div>
-
-    <div class="row mt-5">
-      <div class="col-12">
-        <p>
-          You can also use CryptoProof to verify someone else's ownership of a specific wallet address. You can combine a wallet address (aka a public key), the message, and compare it to a signature supplied by the individual in question. The verifier will return either true or false (verified or unverified, respectively).
-        </p>
-      </div>
-    </div>
-
-    <div class="row mt-3 text-center">
-      <div class="col-12">
-        <h1 class="text-center">Verify signature</h1>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-6">
-        <h4 class="text-center">Enter Wallet Address:</h4>
-        <textarea
-          class="inputTextArea areaMd"
-          type="text" 
-          id="walletInput"
-          placeholder="17Tbeu1VTRB4nMPNJQGC4b6561YwhXdufG"></textarea>
-
-        <h4 class="text-center">Enter Signature:</h4>
-        <textarea
-          class="inputTextArea areaLg"
-          type="text"
-          id="signatureInput"
-          placeholder="H/UjQd4DeaIfT8C5GW5ByTD9Goiu0P6y2VTRcwkpE1wcWIxqCHrEsd7JoOO76avxP6Sqpm2zBSulrazt8WczEuc="></textarea>
-
-        <h4 class="text-center">Enter Message:</h4>
-        <input
-        class="inputTextArea"
-          type="text"
-          id="verifyMessageInput"
-          placeholder=" I, Satoshi, own this wallet">
-      </div>
-
-      <div class="col-6">
-        <h4 class="text-center">Verified?</h4>
-        <p id="verified" class="text-center generatedOutput outputLg">unknown</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-4 offset-4">
-        <button class="btn btn-lg btn-block" type="button" id="verify">verify</button>
-      </div>
     </div>
 
     <div class="row mt-5">

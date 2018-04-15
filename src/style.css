@@ -5,6 +5,15 @@ body {
 .header {
   background-color: #8c8c8c;
 }
+
+.no-margin {
+  margin: 0px;
+}
+
+.thin {
+  padding: 0 40px !important;
+}
+
 .generatedOutput {
   background: rgba(168, 200, 250, .2);
   border-radius: 4px;
@@ -16,7 +25,7 @@ body {
 }
 
 .outputSm {
-  min-height: 140px;
+  min-height: 58px;
 }
 
 .outputLg {
@@ -32,16 +41,24 @@ body {
   margin-bottom: 12px;
 }
 
+.areaSm {
+  min-height: 48px;
+}
+
 .areaMd {
   min-height: 58px;
 }
 
 .areaLg {
-  min-height: 74px;
+  min-height: 48px;
 }
 
 #generate, #verify {
   color: white;
   background-color: rgba(255, 140, 0, 1);
   border-color: #8c8c8c;
+}
+
+#verified {
+  color: grey;
 }
